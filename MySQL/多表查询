@@ -1,0 +1,29 @@
+create table test.employee(
+      emp_id int auto_increment primary key not null,
+      emp_name varchar(50),
+      age int,
+      dept_id int
+      );
+
+insert into test.employee(emp_name,age,dept_id) values
+        ('A',19,200),
+        ('B',26,201),
+        ('C',30,201),
+        ('D',24,202),
+        ('E',20,200),
+        ('F',38,204);
+
+
+create table test.department(
+       dept_id int,
+       dept_name varchar(100)
+      );
+
+insert into test.department values
+      (200,'人事部'),
+      (201,'技术部'),
+      (202,'销售部'),
+      (203,'财政部');
+
+//查询技术部人员信息
+select test.employee.emp_name,test.department.dept_name from test.employee,test.department where test.employee.dept_id=test.department.dept_id and test.department.dept_id = 201;

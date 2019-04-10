@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul style="list-style-type: square;">
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+</ul>
+
+<button>add</button>
+<script src="jquery3.3.1.js"></script>
+<script>
+    // $("ul li").click(function () {
+    //     alert(666)
+    // })
+
+    //.on事件委托
+    $("ul").on("click","li",function () {
+        alert(666)
+    })
+    //事件绑定
+    $("button").click(function () {
+        var $ele=$("<li>");
+        var len=$("ul li").length;
+        $ele.html(len+1);
+        $("ul").append($ele)
+    })
+</script>
+</body>
+</html>

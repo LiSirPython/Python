@@ -1,0 +1,32 @@
+CREATE TABLE test.ClassCharger(
+
+       id TINYINT PRIMARY KEY auto_increment,
+       name VARCHAR (20),
+       age INT ,
+       is_marriged boolean
+);
+
+INSERT INTO test.ClassCharger (name,age,is_marriged) VALUES ("冰冰",12,0),
+                                                       ("丹丹",14,0),
+                                                       ("歪歪",22,0),
+                                                       ("姗姗",20,0),
+                                                       ("小雨",21,0);
+
+
+CREATE TABLE test.Student(
+
+       id INT PRIMARY KEY auto_increment,
+       name VARCHAR (20),
+       charger_id TINYINT,
+       FOREIGN KEY (charger_id) REFERENCES test.ClassCharger(id)
+) ENGINE=INNODB;
+
+INSERT INTO test.Student(name,charger_id) VALUES ("alvin1",2),
+                                            ("alvin2",4),
+                                            ("alvin3",1),
+                                            ("alvin4",3),
+                                            ("alvin5",1),
+                                            ("alvin6",3),
+                                            ("alvin7",2);
+
+

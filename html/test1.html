@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+
+    <div class="div2">i am div2</div>
+    <div name="yuan">i am div2</div>
+    <div id="div3">i am div2</div>
+    <p>hello 1</p>
+    <p>hello 2</p>
+    <p>hello 3</p>
+</div>
+</body>
+<script>
+
+   var div1=document.getElementById("div1");
+
+////支持;
+  var ele= div1.getElementsByTagName("p");
+  console.log(ele)
+   console.log(ele.length)
+  alert(ele.length);
+////支持
+//   var ele2=div1.getElementsByClassName("div2");
+//   alert(ele2.length);
+////不支持
+//   var ele3=div1.getElementById("div3");
+//   alert(ele3.length);
+////不支持
+//   var ele4=div1.getElementsByName("yuan");
+//   alert(ele4.length)
+
+</script>
+</html>
